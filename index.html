@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --default-font-size: 18px;
+        --default-padding: 10px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Kumbh Sans", sans-serif;
+        font-size: 18px;
+      }
+      .wrapper {
+        background-color: hsl(185, 75%, 39%);
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .top-left-background {
+        position: absolute;
+        left: -25%;
+        top: -60%;
+      }
+      .bottom-right-background {
+        position: absolute;
+        bottom: -60%;
+        right: -25%;
+      }
+      .container {
+        border-radius: var(--default-padding);
+        z-index: 2;
+        background-color: white;
+        border-radius: var(--default-padding);
+        display: flex;
+        gap: calc(3 * var(--default-padding));
+        flex-direction: column;
+      }
+      .uppert-front {
+        position: relative;
+      }
+      .avatar {
+        position: absolute;
+        border-radius: 50%;
+        border: var(--default-padding) solid white;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, 10%);
+      }
+      .card-image {
+        border-top-left-radius: var(--default-padding);
+        border-top-right-radius: var(--default-padding);
+        width: 100%;
+      }
+      .lower-front {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--default-padding);
+      }
+      .lower-front * {
+        color: hsl(0, 0%, 59%);
+      }
+      .name-and-age h1 {
+        color: hsl(227, 10%, 46%);
+      }
+      .name-and-age * {
+        font-size: calc(1.5 * var(--default-font-size));
+      }
+      .name-and-age {
+        display: flex;
+        margin-top: 5vh;
+        align-items: center;
+        justify-content: center;
+        gap: var(--default-padding);
+      }
+
+      .signals {
+        border-top: 1px solid rgba(150, 150, 150, 0.5);
+        color: hsl(0, 0%, 59%);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: calc(4 * var(--default-padding));
+        padding: calc(4 * var(--default-padding));
+      }
+      .signal {
+        text-align: center;
+      }
+      .signal h2 {
+        color: rgba(0, 0, 0, 0.7);
+      }
+      @media only screen and (min-width: 375px) {
+        .top-left-background {
+          position: absolute;
+          left: -195%;
+          top: -60%;
+        }
+        .bottom-right-background {
+          position: absolute;
+          bottom: -60%;
+          right: -195%;
+        }
+      }
+      @media only screen and (min-width: 870px) {
+        .top-left-background {
+          position: absolute;
+          left: -25%;
+          top: -60%;
+        }
+        .bottom-right-background {
+          position: absolute;
+          bottom: -60%;
+          right: -25%;
+        }
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="top-left-background">
+        <img src="images/bg-pattern-top.svg" alt="top-left" />
+      </div>
+      <div class="bottom-right-background">
+        <img src="images/bg-pattern-bottom.svg" alt="bottom-right" />
+      </div>
+      <div class="container">
+        <div class="uppert-front">
+          <img
+            src="images/bg-pattern-card.svg"
+            alt="pattern"
+            class="card-image"
+          />
+          <img
+            src="images/image-victor.jpg"
+            alt="Victor Crest"
+            class="avatar"
+          />
+        </div>
+        <div class="lower-front">
+          <div class="name-and-age">
+            <h1>Victor Crest</h1>
+            <span>26</span>
+          </div>
+          <p>London</p>
+        </div>
+        <div class="signals">
+          <div class="signal">
+            <h2>80K</h2>
+            <p>Followers</p>
+          </div>
+          <div class="signal">
+            <h2>803K</h2>
+            <p>Likes</p>
+          </div>
+          <div class="signal">
+            <h2>1.4K</h2>
+            <p>Photos</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+    </main>
+  </body>
+</html>
