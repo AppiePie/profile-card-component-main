@@ -35,6 +35,7 @@
         font-family: "Kumbh Sans", sans-serif;
         font-size: 18px;
       }
+
       .wrapper {
         background-color: hsl(185, 75%, 39%);
         min-height: 100vh;
@@ -44,17 +45,13 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        background-image: url(images/bg-pattern-top.svg),
+          url(images/bg-pattern-bottom.svg);
+        background-size: cover, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 50vw bottom 50vh, left 50vw top 50vh;
       }
-      .top-left-background {
-        position: absolute;
-        left: -25%;
-        top: -60%;
-      }
-      .bottom-right-background {
-        position: absolute;
-        bottom: -60%;
-        right: -25%;
-      }
+
       .container {
         border-radius: var(--default-padding);
         z-index: 2;
@@ -118,30 +115,7 @@
       .signal h2 {
         color: rgba(0, 0, 0, 0.7);
       }
-      @media only screen and (min-width: 375px) {
-        .top-left-background {
-          position: absolute;
-          left: -195%;
-          top: -60%;
-        }
-        .bottom-right-background {
-          position: absolute;
-          bottom: -60%;
-          right: -195%;
-        }
-      }
-      @media only screen and (min-width: 870px) {
-        .top-left-background {
-          position: absolute;
-          left: -25%;
-          top: -60%;
-        }
-        .bottom-right-background {
-          position: absolute;
-          bottom: -60%;
-          right: -25%;
-        }
-      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -153,12 +127,6 @@
   </head>
   <body>
     <main class="wrapper">
-      <div class="top-left-background">
-        <img src="images/bg-pattern-top.svg" alt="top-left" />
-      </div>
-      <div class="bottom-right-background">
-        <img src="images/bg-pattern-bottom.svg" alt="bottom-right" />
-      </div>
       <div class="container">
         <div class="uppert-front">
           <img
